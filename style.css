@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {  background-color: rgb(82, 79, 79);
+    color: white;
+      justify-content: center;
+    align-items: center;
+    padding: 15px 15px 15px;
+    margin-bottom: 20px;
+}
+
+header input {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: rgb(219, 210, 210);
+    color: black;
+    border-bottom: 2px solid darkslategray;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.red {
+    background-color: red;
+}
+
+.row5 {display: flex;
+    flex-direction: row;
+}
