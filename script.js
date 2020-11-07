@@ -1,11 +1,57 @@
-// $(document).ready(function() {
+$(document).ready(function() {
+
    // search button event
 $("#searchBtn").on("click", function () {
-    
+    weather();
+    save();
+});
+
+// var emptyArray = [];
+// var historyArr = JSON.parse(localStorage.getItem("data"));
+// if (!historyArr){
+//     localStorage.setItem("data", JSON.stringify(emptyArr));
+//     historyArr = emptyArr;
+// } else {
+//     weather ();
+// }
+
+
+// $(document).on("click",".list-group-item btn btn-light text-left", function(){
+    $("#historyBtn").on("click", function () {
+    console.log("help");
+    console.log($(this).text());
+    var cityInput = $("#historyBtn").val();
+    weather();
+})
+ 
+    function save() {
+    var newData = $("#searchBox").val();
+
+        // if there's nothing saved then save an empty array
+        if (localStorage.getItem("data") == null) {
+            localStorage.setItem("data", "[]");
+        }
+        // get old data and add it to the new data
+        var oldData = JSON.parse(localStorage.getItem("data"));
+        // console.log(oldData);
+        oldData.push(newData);
+        localStorage.setItem("data", JSON.stringify(oldData));
+        var savedData = localStorage.getItem("data");
+        // console.log(savedData);
+
+        if (savedData != null) {
+            var parseData = JSON.parse(savedData);
+            var history = $("#history");
+            history.empty();
+            for (i = 0; i < parseData.length; i++) {
+                var output = $("<button>").attr("type", "button").attr("id", "historyBtn").attr("class", "list-group-item btn btn-light text-left").text(parseData[i]);
+                history.append(output);
+            }
+        }
+    }
+
+    function weather(){ 
     var cityInput = $("#searchBox").val();
-
-
-
     var currentWeather = "https://api.openweathermap.org/data/2.5/weather?q=" +
         cityInput + "&units=imperial&APPID=7455a546f39f9c232db77780672611f7";
     var date = moment().format("MM/DD/YYYY");
@@ -49,7 +95,7 @@ $("#searchBtn").on("click", function () {
             url: fivedayWeather,
             method: "GET",
         }).then(function (response5) {
-            // console.log(response5);
+            $("#fiveDay").empty();
             for (i = 1; i < 6; i++) {
                 var fiveDayIcon = "https://api.openweathermap.org/img/w/" + response5.daily[i].weather[0].icon + ".png";
                 var card = $("<div>").attr("class", "card col bg-primary m-2 pad5");
@@ -62,6 +108,6 @@ $("#searchBtn").on("click", function () {
                 $("#fiveDay").append(card);
             }
         })
-    })
+    })}
 })
 
