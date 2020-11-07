@@ -48,3 +48,13 @@ header input {
 .row5 {display: flex;
     flex-direction: row;
 }
+
+.pad {
+    padding: 30px;
+}
+
+.pad5 {      justify-content: left;
+    align-items: left;
+
+    padding: 1px;
+}
