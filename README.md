@@ -25,7 +25,7 @@ The searched city is added to the local storage, thus when the user will reopen 
 <br><br>
 Attached below the screenshots of the applicaton:<br>
 
-![User's interface](Screenshot.png)
+![User's interface](Screenshot.jpg)
 
 <br>
 
