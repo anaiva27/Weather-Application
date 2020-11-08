@@ -11,23 +11,27 @@
 </head>
 
 <body>
+    <!-- bootstrap styles container -->
     <div class="container-fluid">
-        <div class="row header">
+         <!-- navbar -->
+        <nav class="row header">
             <h1>Weather Dashboard</h1>
-        </div>
-        <div class="row">
+        </nav>
+         <!-- main section -->
+        <main class="row">
             <div class="col-md-3">
-                <div class="input-group mb-2">
+                <div class="input-group">
                     <input type="text" class="form-control" id="searchBox" placeholder="Search for a city..."
                         aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
+                    <div class="input-group-btn">
                         <button class="btn btn-primary" type="button" id="searchBtn">
                             <i class="fas fa-search"></i></button>
                     </div>
                 </div>
-                <ul id="history" class="list-group list-group-flush">Search history:</ul>
+                <ul id="history" class="list-group">Search history:</ul>
             </div>
-            <main class="col-md-9">
+             <!-- today's forecast -->
+            <div class="col-md-9">
                 <div class="card pad">
                     <section class="location">
                         <h2 id="cityInput">City</h2>
@@ -39,10 +43,11 @@
                         <div>UV index: <span id="uv"></span></div>
                     </div>
                 </div>
+                 <!-- container for 5 day forecast  -->
                 <h2>5-Day Forecast</h2>
                 <div class="row5" id="fiveDay"></div>
-            </main>
-        </div>
+            </div>
+        </main>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
