@@ -2,7 +2,7 @@
 
 ## Description 
 
-The application needs to be created to check the weather information all around the world, such as temperature, humidity, UV index and same parameters for the next five days. The application has to save the search history and present the last requested city's weather.
+This weather forecast application allows the user to check the weather information all around the world, such as temperature, humidity, UV index and same parameters for the next five days. The application has to save the search history and present the last requested city's weather.
 
 ## Table of Contents
 
