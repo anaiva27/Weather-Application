@@ -32,7 +32,7 @@ Attached below the screenshots of the applicaton:<br>
 
 ## Links
 
-[Day Planner App](https://anaiva27.github.io/Weather-Application/) <br>
+[Weather Forecast App](https://anaiva27.github.io/Weather-Application/) <br>
 [GitHub repository](https://github.com/anaiva27/Weather-Application)<br>
 Libraries:<br>
 [jQuery](https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js) <br>
